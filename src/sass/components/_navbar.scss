@@ -1,0 +1,16 @@
+.navbar {
+    &__nav {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        height: 100%;
+    }
+    &__item {
+        margin-left: 20px;
+        & > a {
+            display: block;
+            color: inherit;
+        }
+    }
+}

@@ -4,7 +4,16 @@
 
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 
+@import 'components/container';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/logo';
+@import 'components/navbar';
+@import 'components/social';
+
 body {
     font-size: 1.8rem;
     line-height: 1.65;
+    background-color: #03082e;
+    color: #ffffff;
 }

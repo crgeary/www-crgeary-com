@@ -1,0 +1,33 @@
+.social {
+    padding-left: 0;
+    color: inherit;
+    margin-bottom: 0;
+
+    &__item {
+        list-style: none;
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color: #ffffff;
+        border: 1px solid rgba(#ffffff, 0.25);
+        transition: all 0.2s ease;
+
+        & > svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+        }
+    }
+}
