@@ -13,18 +13,18 @@
         "serve": "http-server ./dist"
     },
     "dependencies": {
-        "fs-extra": "^9.1.0",
-        "recursive-readdir": "^2.2.2",
-        "sass": "^1.32.5"
+        "fs-extra": "9.1.0",
+        "recursive-readdir": "2.2.2",
+        "sass": "1.32.5"
     },
     "devDependencies": {
-        "@crgeary/configuration-prettier": "^1.0.3",
-        "eslint": "^7.18.0",
-        "eslint-config-prettier": "^7.2.0",
-        "http-server": "^0.12.3",
-        "husky": "^4.3.8",
-        "lint-staged": "^10.5.3",
-        "prettier": "^2.2.1"
+        "@crgeary/configuration-prettier": "1.0.3",
+        "eslint": "7.18.0",
+        "eslint-config-prettier": "7.2.0",
+        "http-server": "0.12.3",
+        "husky": "4.3.8",
+        "lint-staged": "10.5.3",
+        "prettier": "2.2.1"
     },
     "prettier": "@crgeary/configuration-prettier",
     "husky": {
