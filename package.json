@@ -1,0 +1,34 @@
+{
+    "name": "www-crgeary-com",
+    "private": true,
+    "description": "My personal website.",
+    "author": "Christopher Geary <hello@crgeary.com>",
+    "scripts": {
+        "format": "prettier --ignore-path .gitignore --write .",
+        "check-format": "prettier --list-different --ignore-path .gitignore .",
+        "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx ."
+    },
+    "devDependencies": {
+        "@crgeary/configuration-prettier": "^1.0.3",
+        "eslint": "^7.18.0",
+        "eslint-config-prettier": "^7.2.0",
+        "husky": "^4.3.8",
+        "lint-staged": "^10.5.3",
+        "prettier": "^2.2.1"
+    },
+    "prettier": "@crgeary/configuration-prettier",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.+(js|jsx)": [
+            "eslint"
+        ],
+        "**/*.+(js|jsx|json)": [
+            "prettier --write",
+            "git add"
+        ]
+    }
+}
