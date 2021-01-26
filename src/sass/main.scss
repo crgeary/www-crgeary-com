@@ -1,5 +1,19 @@
+@import 'variables';
+
 :root {
     font-size: 62.5%;
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 300;
+    src: url('../fonts/Gilroy-Light.woff2') format('woff2'), url('../fonts/Gilroy-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 800;
+    src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'), url('../fonts/Gilroy-ExtraBold.woff') format('woff');
 }
 
 @import '../../node_modules/modern-normalize/modern-normalize.css';
@@ -16,4 +30,8 @@ body {
     line-height: 1.65;
     background-color: #03082e;
     color: #ffffff;
+}
+
+a {
+    text-decoration: none;
 }
