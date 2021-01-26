@@ -4,9 +4,7 @@
     "description": "My personal website.",
     "author": "Christopher Geary <hello@crgeary.com>",
     "scripts": {
-        "build": "npm run build:scripts && npm run build:html",
-        "build:scripts": "webpack --config=bin/webpack.config.js",
-        "build:html": "node ./bin/build.js",
+        "build": "node ./bin/build.js",
         "format": "prettier --ignore-path .gitignore --write .",
         "check-format": "prettier --list-different --ignore-path .gitignore .",
         "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
@@ -23,8 +21,7 @@
         "recursive-readdir": "2.2.2",
         "sass": "1.32.5",
         "sass-loader": "10.1.1",
-        "webpack": "5.17.0",
-        "webpack-cli": "4.4.0"
+        "webpack": "5.17.0"
     },
     "devDependencies": {
         "@crgeary/configuration-prettier": "1.0.3",
