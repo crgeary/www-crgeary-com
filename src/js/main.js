@@ -1,10 +1,14 @@
 import '../sass/main.scss';
 
 (function () {
-    const switchTheme = (theme) => {
-        document.body.setAttribute('data-theme', theme);
-    };
     document.addEventListener('DOMContentLoaded', () => {
+        const themeSwitch = document.querySelector('#theme-switch');
+        const switchTheme = (theme) => {
+            document.body.setAttribute('data-theme', theme);
+            if (themeSwitch) {
+                themeSwitch.setAttribute('aria-checked', theme === 'dark');
+            }
+        };
         const themeMQ = window.matchMedia('(prefers-color-scheme: dark)');
         const currentTheme = window.localStorage.getItem('color-scheme');
         if (currentTheme === 'dark' || currentTheme === 'light') {
@@ -15,7 +19,6 @@ import '../sass/main.scss';
                 switchTheme(e.matches ? 'dark' : 'light');
             });
         }
-        const themeSwitch = document.querySelector('#theme-switch');
         if (themeSwitch) {
             const { body } = document;
             themeSwitch.addEventListener('click', () => {
