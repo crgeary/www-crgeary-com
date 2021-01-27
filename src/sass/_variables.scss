@@ -1,1 +1,11 @@
 $font-family-secondary: Gilroy, cursive;
+
+:root {
+    --page--background-color: #ffffff;
+    --page--color: #000000;
+}
+
+[data-theme='dark'] {
+    --page--background: #03082e;
+    --page--color: #ffffff;
+}

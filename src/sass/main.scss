@@ -24,12 +24,20 @@
 @import 'components/logo';
 @import 'components/navbar';
 @import 'components/social';
+@import 'components/theme-switch';
+
+html,
+body {
+    height: 100%;
+}
 
 body {
     font-size: 1.8rem;
     line-height: 1.65;
-    background-color: #03082e;
-    color: #ffffff;
+    background-color: var(--page--background);
+    color: var(--page--color);
+    display: flex;
+    flex-direction: column;
 }
 
 a {
