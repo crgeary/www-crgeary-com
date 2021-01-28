@@ -14,11 +14,13 @@
         margin-right: 10px;
         border: 1px solid #000000;
         background-color: #34daff;
+        flex-shrink: 0;
     }
 
     &__name,
     &__description {
         display: block;
+        white-space: nowrap;
     }
 
     &__name {
