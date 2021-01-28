@@ -1,0 +1,67 @@
+*:focus-visible {
+    outline: 1px solid #18a0fb;
+}
+
+.focus-marker {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+
+    &::after {
+        content: attr(data-width) ' x ' attr(data-height);
+        background-color: #18a0fb;
+        color: #ffffff;
+        font-size: 1.1rem;
+        border-radius: 3px;
+        padding: 3px 4px;
+        line-height: 1;
+        white-space: nowrap;
+        position: absolute;
+        top: calc(100% + 7px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__inner {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &,
+        span,
+        span::before,
+        span::after {
+            display: block;
+            position: absolute;
+        }
+
+        span {
+            top: 0;
+            width: 8px;
+            height: 100%;
+            &::before,
+            &::after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                background-color: #ffffff;
+                border: 1px solid #18a0fb;
+            }
+            &::before {
+                top: -5px;
+            }
+            &::after {
+                bottom: -5px;
+            }
+        }
+        span:first-child {
+            left: -5px;
+        }
+        span:last-child {
+            right: -5px;
+        }
+    }
+}
