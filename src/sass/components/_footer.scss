@@ -2,7 +2,8 @@
     padding: 50px 0;
     text-align: center;
     margin-top: auto;
-    color: inherit;
+    color: var(--footer--color);
+    font-size: 1.4rem;
 
     &__social {
         margin-bottom: size(xs);

@@ -3,9 +3,13 @@ $font-family-secondary: Gilroy, cursive;
 :root {
     --page--background-color: #ffffff;
     --page--color: #000000;
+
+    --footer--color: rgba(0, 0, 0, 0.55);
 }
 
 [data-theme='dark'] {
     --page--background: #03082e;
     --page--color: #ffffff;
+
+    --footer--color: rgba(255, 255, 255, 0.55);
 }
