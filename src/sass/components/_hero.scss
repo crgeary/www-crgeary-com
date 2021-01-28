@@ -1,0 +1,36 @@
+.hero {
+    text-align: left;
+    font-family: $font-family-secondary;
+    font-weight: 300;
+    font-size: 3.6rem;
+    padding: 7.5rem 15px;
+
+    &__intro,
+    &__caption {
+        margin: 0;
+    }
+
+    &__intro {
+        margin-bottom: 2.5rem;
+    }
+
+    &__caption {
+        font-weight: 800;
+        font-size: 6.4rem;
+        line-height: 1.1;
+
+        mark {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &:nth-child(3n) {
+                background-image: linear-gradient(to right, #fad513, #34daff);
+            }
+            &:nth-child(3n + 1) {
+                background-image: linear-gradient(to right, #34daff, #de69b4);
+            }
+            &:nth-child(3n + 2) {
+                background-image: linear-gradient(to right, #b9ea7c, #de69b4);
+            }
+        }
+    }
+}
