@@ -4,7 +4,7 @@
     "description": "My personal website.",
     "author": "Christopher Geary <hello@crgeary.com>",
     "scripts": {
-        "build": "node ./bin/build.js",
+        "build": "node ./bin build",
         "format": "prettier --ignore-path .gitignore --write .",
         "check-format": "prettier --list-different --ignore-path .gitignore .",
         "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
@@ -14,6 +14,7 @@
         "@babel/core": "7.12.10",
         "@babel/preset-env": "7.12.11",
         "babel-loader": "8.2.2",
+        "commander": "^7.0.0",
         "css-loader": "5.0.1",
         "file-loader": "^6.2.0",
         "fs-extra": "9.1.0",

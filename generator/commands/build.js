@@ -3,15 +3,15 @@ const path = require('path');
 const fs = require('fs-extra');
 const recursive = require('recursive-readdir');
 const webpack = require('webpack');
-const webpackConfig = require('./configs/webpack.config');
+const webpackConfig = require('../webpack.config');
 
-(async () => {
+module.exports = async () => {
     const paths = {
         content: path.resolve(process.cwd(), 'src/content'),
         views: path.resolve(process.cwd(), 'src/views'),
         dist: path.resolve(process.cwd(), 'dist'),
     };
-
+    await fs.remove(paths.dist);
     webpack(webpackConfig, async (err, stats) => {
         if (err) {
             console.error(err.stack || err);
@@ -41,4 +41,4 @@ const webpackConfig = require('./configs/webpack.config');
             );
         }
     });
-})();
+};
