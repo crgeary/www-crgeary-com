@@ -5,13 +5,14 @@ const recursive = require('recursive-readdir');
 const webpack = require('webpack');
 const webpackConfig = require('../webpack.config');
 
-module.exports = async () => {
-    const paths = {
-        content: path.resolve(process.cwd(), 'src/content'),
-        views: path.resolve(process.cwd(), 'src/views'),
-        dist: path.resolve(process.cwd(), 'dist'),
-    };
+const paths = require('../paths');
+
+const removeDist = async () => {
     await fs.remove(paths.dist);
+};
+
+module.exports = async () => {
+    await removeDist();
     webpack(webpackConfig, async (err, stats) => {
         if (err) {
             console.error(err.stack || err);

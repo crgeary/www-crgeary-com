@@ -6,11 +6,7 @@ const webpackConfig = require('../webpack.config.dev');
 
 const compiler = webpack(webpackConfig);
 
-const paths = {
-    content: path.resolve(process.cwd(), 'src/content'),
-    views: path.resolve(process.cwd(), 'src/views'),
-    dist: path.resolve(process.cwd(), 'dist'),
-};
+const paths = require('../paths');
 
 const convertRequestPathToContentPath = (requestPath) => {
     let slug = requestPath
