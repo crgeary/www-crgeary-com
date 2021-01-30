@@ -5,6 +5,7 @@
     "author": "Christopher Geary <hello@crgeary.com>",
     "scripts": {
         "build": "node ./bin build",
+        "watch": "node ./bin watch",
         "format": "prettier --ignore-path .gitignore --write .",
         "check-format": "prettier --list-different --ignore-path .gitignore .",
         "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
@@ -29,10 +30,13 @@
         "@crgeary/configuration-prettier": "1.0.3",
         "eslint": "7.18.0",
         "eslint-config-prettier": "7.2.0",
+        "express": "^4.17.1",
         "http-server": "0.12.3",
         "husky": "4.3.8",
         "lint-staged": "10.5.3",
-        "prettier": "2.2.1"
+        "prettier": "2.2.1",
+        "webpack-dev-middleware": "^4.1.0",
+        "webpack-hot-middleware": "^2.25.0"
     },
     "prettier": "@crgeary/configuration-prettier",
     "husky": {

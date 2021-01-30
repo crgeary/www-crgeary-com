@@ -1,18 +1,13 @@
 const { program } = require('commander');
 
-const buildCommand = require('../generator/commands/build');
-
 program
     .command(`build`)
     .description(`Build a production copy`)
-    .action(async () => await buildCommand());
+    .action(async () => await require('../generator/commands/build')());
 
-// @todo, create a development server
-// program
-//     .command(`watch`)
-//     .description(`Start a development server`)
-//     .action(async () => {
-//         await run(server);
-//     });
+program
+    .command(`watch`)
+    .description(`Start a development server`)
+    .action(async () => await require('../generator/commands/watch')());
 
 program.parse(process.argv);
