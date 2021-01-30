@@ -22,15 +22,12 @@ const convertRequestPathToContentPath = (requestPath) => {
 
 module.exports = async () => {
     const app = express();
+    app.set('etag', false);
     app.use(require('webpack-dev-middleware')(compiler));
     app.use(require('webpack-hot-middleware')(compiler));
-    app.use((req, res, next) => {
-        res.set('Cache-Control', 'no-store');
-        next();
-    });
+    app.use(require('../middleware/nocache'));
     app.get('*', async (req, res) => {
         const attemptedPath = convertRequestPathToContentPath(req.path);
-        console.log(attemptedPath);
         if (await fs.exists(attemptedPath)) {
             const layout = await fs.readFile(path.join(paths.views, 'layout.html'), 'utf8');
             const content = await fs.readFile(attemptedPath, 'utf8');
