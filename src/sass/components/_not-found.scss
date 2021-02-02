@@ -1,0 +1,16 @@
+.not-found {
+    text-align: center;
+
+    &__caption {
+        font-family: $font-family-secondary;
+        font-weight: 800;
+        font-size: 3.2rem;
+        opacity: 0.15;
+    }
+
+    &__404 {
+        font-size: 25rem;
+        line-height: 1;
+        margin-top: 0;
+    }
+}
