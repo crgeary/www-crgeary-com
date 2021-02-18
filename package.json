@@ -12,8 +12,8 @@
         "serve": "http-server ./dist"
     },
     "dependencies": {
-        "@babel/core": "7.12.16",
-        "@babel/preset-env": "7.12.16",
+        "@babel/core": "7.12.17",
+        "@babel/preset-env": "7.12.17",
         "babel-loader": "8.2.2",
         "commander": "7.1.0",
         "css-loader": "5.0.2",
