@@ -29,7 +29,7 @@
     "devDependencies": {
         "@crgeary/configuration-prettier": "1.0.3",
         "eslint": "7.21.0",
-        "eslint-config-prettier": "7.2.0",
+        "eslint-config-prettier": "8.1.0",
         "express": "4.17.1",
         "http-server": "0.12.3",
         "husky": "4.3.8",
