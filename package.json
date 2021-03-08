@@ -9,7 +9,9 @@
         "format": "prettier --ignore-path .gitignore --write .",
         "check-format": "prettier --list-different --ignore-path .gitignore .",
         "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
-        "serve": "http-server ./dist"
+        "serve": "http-server ./dist",
+        "prepare": "husky install",
+        "pre-commit": "lint-staged"
     },
     "dependencies": {
         "@babel/core": "7.13.8",
@@ -32,18 +34,13 @@
         "eslint-config-prettier": "7.2.0",
         "express": "4.17.1",
         "http-server": "0.12.3",
-        "husky": "4.3.8",
+        "husky": "^5.1.3",
         "lint-staged": "10.5.4",
         "prettier": "2.2.1",
         "webpack-dev-middleware": "4.1.0",
         "webpack-hot-middleware": "2.25.0"
     },
     "prettier": "@crgeary/configuration-prettier",
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
     "lint-staged": {
         "**/*.+(js|jsx)": [
             "eslint"
