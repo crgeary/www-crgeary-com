@@ -14,7 +14,7 @@
         "pre-commit": "lint-staged"
     },
     "dependencies": {
-        "@babel/core": "7.14.2",
+        "@babel/core": "7.14.3",
         "@babel/preset-env": "7.14.2",
         "babel-loader": "8.2.2",
         "commander": "7.2.0",
