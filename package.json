@@ -17,7 +17,7 @@
         "@babel/core": "7.14.6",
         "@babel/preset-env": "7.14.7",
         "babel-loader": "8.2.2",
-        "commander": "7.2.0",
+        "commander": "8.0.0",
         "css-loader": "5.2.7",
         "file-loader": "6.2.0",
         "fs-extra": "9.1.0",
